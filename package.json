@@ -23,5 +23,13 @@
     "async"
   ],
   "author": "Kıraç Armağan Önal",
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheArmagan/ffdraw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheArmagan/ffdraw/issues"
+  },
+  "homepage": "https://github.com/TheArmagan/ffdraw#readme"
 }
