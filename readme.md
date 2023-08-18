@@ -105,7 +105,7 @@ drawer
     height: 676,
     data: {},
   })
-  .render()
+  .render({ targetFPS: 30 })
   .then(console.log)
   .catch(console.error)
   .finally(() => client.destroy());
