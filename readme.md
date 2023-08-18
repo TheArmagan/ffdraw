@@ -8,8 +8,8 @@ const { FFClient } = require("ffdraw");
 const client = new FFClient({ canvasPoolSize: 4 });
 
 const drawer = client.createDrawer({
-  width: 675,
-  height: 676,
+  width: 100,
+  height: 100,
   backgroundImage: "./myBg.png", // its optional, uses black background by default
 });
 
@@ -53,6 +53,24 @@ drawer
       // background is optional
       color: "#00000030",
       padding: 5,
+    },
+  })
+  .drawText({
+    text: "selam",
+    x: 50,
+    y: 50,
+    font: "Arial", // ttf path or font name
+    size: 30,
+    color: "#ff0000",
+    background: {
+      // background is optional
+      color: "#00000030",
+      padding: 5,
+    },
+    align: {
+      // align is optional
+      x: "center",
+      y: "center",
     },
   })
   .drawRectangle({
