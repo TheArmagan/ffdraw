@@ -1,6 +1,6 @@
 const { FFClient } = require("./lib");
 
-const client = new FFClient({ canvasPoolSize: 0 });
+const client = new FFClient({ canvasPoolSize: 1 });
 
 let stuff = client.createDrawer({
   width: 1000,
@@ -40,10 +40,27 @@ let stuff = client.createDrawer({
 
 stuff.drawText({
   text: "Hello, world! ❤️ '",
-  x: 250,
-  y: 250,
-  align: "center",
+  x: 1000,
+  y: 1000,
+  align: "end",
   size: 40,
+  type: "canvas",
+  color: "white",
+  shadow: {
+    color: "red",
+    x: 2,
+    y: 2,
+  }
+})
+
+stuff.drawText({
+  text: "Hello, world! ❤️ '",
+  x: 0,
+  y: 0,
+  align: "start",
+  size: 40,
+  type: "native",
+  color: "white",
   shadow: {
     color: "red",
     x: 2,
@@ -57,4 +74,4 @@ stuff.drawText({
 //   y: 0,
 // })
 
-stuff.render().then(console.log).catch(console.error);
+stuff.render().then(console.log).catch(console.error).then(() => client.destroy());
