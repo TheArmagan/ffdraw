@@ -55,9 +55,9 @@ let stuff = client.createDrawer({
 
 stuff.drawText({
   text: "Hello, world! ❤️ '",
-  x: 10,
-  y: 10,
-  size: 14,
+  x: 1,
+  y: 1,
+  size: 16,
   type: "canvas",
   color: "white",
 })
