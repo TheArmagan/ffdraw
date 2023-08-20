@@ -59,19 +59,15 @@ drawer
     text: "selam",
     x: 50,
     y: 50,
-    font: "Arial", // ttf path or font name
+    font: "Monospace", // ttf path or font name
     size: 30,
     color: "#ff0000",
-    background: {
-      // background is optional
-      color: "#00000030",
-      padding: 5,
-    },
     align: {
       // align is optional
       x: "center",
       y: "center",
     },
+    type: "canvas", // canvas or native, default is native
   })
   .drawRectangle({
     x: 100,
@@ -105,7 +101,7 @@ drawer
     height: 676,
     data: {},
   })
-  .render({ targetFPS: 30 })
+  .render({ targetFPS: 30, useSeparateCanvasLayersForText: false })
   .then(console.log)
   .catch(console.error)
   .finally(() => client.destroy());
