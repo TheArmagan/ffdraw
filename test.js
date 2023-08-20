@@ -3,7 +3,7 @@ const { FFClient } = require("./lib");
 const client = new FFClient({ canvasPoolSize: 1 });
 
 let stuff = client.createDrawer({
-  width: 100,
+  width: 1000,
   height: 100,
 });
 
@@ -54,12 +54,30 @@ let stuff = client.createDrawer({
 // })
 
 stuff.drawText({
-  text: "Hello, world! ❤️ '",
+  text: "Abcdefghijklmnopqrstuvwxyz",
   x: 1,
   y: 1,
   size: 16,
   type: "canvas",
-  color: "white",
+  color: "red",
+})
+
+stuff.drawText({
+  text: "Abcdefghijklmnopqrstuvwxyz",
+  x: 1,
+  y: 1,
+  size: 16,
+  type: "canvas",
+  color: "red",
+})
+
+stuff.drawText({
+  text: "Abcdefghijklmnopqrstuvwxyz",
+  x: 1,
+  y: 1,
+  size: 16,
+  type: "canvas",
+  color: "red",
 })
 
 // drawer.drawFile({
