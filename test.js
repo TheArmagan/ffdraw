@@ -58,27 +58,10 @@ stuff.drawText({
   x: 1,
   y: 1,
   size: 16,
-  type: "canvas",
   color: "red",
+  type: "canvas",
 })
 
-stuff.drawText({
-  text: "Abcdefghijklmnopqrstuvwxyz",
-  x: 1,
-  y: 1,
-  size: 16,
-  type: "canvas",
-  color: "red",
-})
-
-stuff.drawText({
-  text: "Abcdefghijklmnopqrstuvwxyz",
-  x: 1,
-  y: 1,
-  size: 16,
-  type: "canvas",
-  color: "red",
-})
 
 // drawer.drawFile({
 //   file: "./slow.gif",
