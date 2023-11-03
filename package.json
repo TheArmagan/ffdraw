@@ -4,9 +4,10 @@
     "fluent-ffmpeg": "^2.1.2"
   },
   "name": "ffdraw",
-  "version": "0.0.11",
+  "version": "0.0.14",
   "description": "Canvas variant that supports GIFs using ffmpeg. Also its fully async and fast.",
   "main": "./lib/index.js",
+  "types": "./types.d.ts",
   "directories": {
     "lib": "lib"
   },
