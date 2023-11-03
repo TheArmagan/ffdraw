@@ -1,6 +1,6 @@
 export class FFClient {
   constructor(opts: { canvasPoolSize?: number, canvasFonts?: { path: string, family: string, weight?: number, style?: string }[], tempDir?: string }?);
-  createRenderer(opts: { width: number, height: number, backgroundImage: string }): FFRenderer;
+  createRenderer(opts: { width: number, height: number, backgroundImage?: string }): FFRenderer;
   destroy(): void;
 }
 
