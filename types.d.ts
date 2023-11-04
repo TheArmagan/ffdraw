@@ -17,7 +17,7 @@ export class FFRenderer {
   /**
    * if type is "native" then it will use ffmpeg drawtext filter to draw text, otherwise it will use canvas to draw text. 
    */
-  drawText(opts: { text: string, x: number, y: number, font?: string, size: string, color?: string, align?: "start" | "center" | "end" | { x: "start" | "center" | "end", y: "start" | "center" | "end" } | "start" | "center" | "end", shadow?: { color: string, x: number, y: number }, border?: { color: string, x: number, y: number }, type?: "native" | "canvas", weight?: "normal" | "bold" | number }): FFRenderer;
+  drawText(opts: { text: string, x: number, y: number, font?: string, size: string | number, color?: string, align?: "start" | "center" | "end" | { x: "start" | "center" | "end", y: "start" | "center" | "end" } | "start" | "center" | "end", shadow?: { color: string, x: number, y: number }, border?: { color: string, x: number, y: number }, type?: "native" | "canvas", weight?: "normal" | "bold" | number }): FFRenderer;
 
   drawRectangle(opts: { x: number, y: number, width: number, height: number, color: string, thickness?: number, align?: { x: "start" | "center" | "end", y: "start" | "center" | "end" } | "start" | "center" | "end" }): FFRenderer;
 
@@ -26,5 +26,5 @@ export class FFRenderer {
   /**
    * do not forget to call clear() after render() to free resources
    */
-  render(opts: { targetFPS?: number, useSeparateCanvasLayersForText?: boolean }): Promise<{ clear: () => Promise<void>, result: { path: string, buffer: () => Promise<Buffer>, write: (path: string) => Promise<void> }, took: number }>
+  render(opts: { targetFPS?: number, useSeparateCanvasLayersForText?: boolean } | undefined): Promise<{ clear: () => Promise<void>, result: { path: string, buffer: () => Promise<Buffer>, write: (path: string) => Promise<void> }, took: number }>
 }
